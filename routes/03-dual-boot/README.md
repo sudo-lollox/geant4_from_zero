@@ -61,7 +61,7 @@ shutdown /s /t 0
 
 В нашем примере под Manjaro освобождено **97,66 ГБ**:
 
-![Нераспределённое место рядом с Windows](windows-disk-unallocated.svg)
+![Нераспределённое место рядом с Windows](windows-disk-unallocated.webp)
 
 > [!IMPORTANT]
 > Ничего не создавайте в этой области средствами Windows и не форматируйте её в NTFS. Она должна остаться **нераспределённой** до запуска установщика Manjaro.
@@ -253,7 +253,7 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 
 Итоговая разметка должна выглядеть так:
 
-![Итоговая ручная разметка dual boot: отдельный EFI Manjaro и root рядом с Windows](dualboot-manual-partition.svg)
+![Итоговая ручная разметка dual boot: отдельный EFI Manjaro и root рядом с Windows](dualboot-manual-partition.webp)
 
 Перед нажатием **Далее** проверьте ещё раз:
 
