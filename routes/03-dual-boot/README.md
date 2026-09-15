@@ -53,7 +53,7 @@ shutdown /s /t 0
 2. Найдите основной раздел Windows — обычно это **C:**.
 3. Нажмите по нему правой кнопкой и выберите **Сжать том**.
 
-![Сжатие раздела Windows перед установкой Manjaro](windows-shrink-volume.svg)
+![Сжатие раздела Windows перед установкой Manjaro](windows-disk-unallocated_0.png)
 
 4. Укажите объём, который хотите отдать Manjaro, и подтвердите сжатие.
 
@@ -61,7 +61,7 @@ shutdown /s /t 0
 
 В нашем примере под Manjaro освобождено **97,66 ГБ**:
 
-![Нераспределённое место рядом с Windows](windows-disk-unallocated.webp)
+![Нераспределённое место рядом с Windows](windows-disk-unallocated.png)
 
 > [!IMPORTANT]
 > Ничего не создавайте в этой области средствами Windows и не форматируйте её в NTFS. Она должна остаться **нераспределённой** до запуска установщика Manjaro.
@@ -253,7 +253,7 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 
 Итоговая разметка должна выглядеть так:
 
-![Итоговая ручная разметка dual boot: отдельный EFI Manjaro и root рядом с Windows](dualboot-manual-partition.webp)
+![Итоговая ручная разметка dual boot: отдельный EFI Manjaro и root рядом с Windows](dualboot-manual-partition.jpeg)
 
 Перед нажатием **Далее** проверьте ещё раз:
 
