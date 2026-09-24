@@ -8,3 +8,4 @@
 2. [Manjaro в виртуальной машине](routes/02-virtualbox/README.md)
 3. [Manjaro как вторая система рядом с Windows](routes/03-dual-boot/README.md)
 4. [Установка Geant4 на Manjaro](routes/04-geant4/README.md)
+5. [Установка Geant4 на macOS](routes/05-macos/README.md)
