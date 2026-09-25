@@ -63,6 +63,16 @@ yay -S geant4
 > [!NOTE]
 > Geant4 собирается из исходного кода, поэтому установка может занять десятки минут. Пока в терминале появляются строки `Building CXX object`, сборка продолжается.
 
+В конце успешной установки вывод выглядит примерно так:
+
+```text
+==> Finished making: geant4 ...
+...
+(1/1) installing geant4
+```
+
+Номера версии и часть служебных строк могут отличаться. Главное — сборка завершилась без `ERROR` и пакет `geant4` был установлен.
+
 После установки проверьте версию:
 
 ```bash
@@ -91,17 +101,30 @@ yay -S \
   geant4-channelingdata
 ```
 
-Проверьте, что Geant4 видит установленные данные:
+Посмотрите список datasets, которые ожидает установленный Geant4:
 
 ```bash
 geant4-config --datasets
 ```
 
-Пути к наборам данных должны указывать на каталоги внутри:
+Вывод имеет вид «dataset — переменная окружения — путь», например:
 
 ```text
-/usr/share/Geant4/data/
+G4NDL G4NEUTRONHPDATA /usr/share/Geant4/data/G4NDL4.7.1
+G4EMLOW G4LEDATA /usr/share/Geant4/data/G4EMLOW8.8
+PhotonEvaporation G4LEVELGAMMADATA /usr/share/Geant4/data/PhotonEvaporation6.1.2
+RadioactiveDecay G4RADIOACTIVEDATA /usr/share/Geant4/data/RadioactiveDecay6.1.2
+G4PARTICLEXS G4PARTICLEXSDATA /usr/share/Geant4/data/G4PARTICLEXS4.2
+G4PII G4PIIDATA /usr/share/Geant4/data/G4PII1.3
+RealSurface G4REALSURFACEDATA /usr/share/Geant4/data/RealSurface2.2
+G4SAIDDATA G4SAIDXSDATA /usr/share/Geant4/data/G4SAIDDATA2.0
+G4ABLA G4ABLADATA /usr/share/Geant4/data/G4ABLA3.3
+G4INCL G4INCLDATA /usr/share/Geant4/data/G4INCL1.3
+G4ENSDFSTATE G4ENSDFSTATEDATA /usr/share/Geant4/data/G4ENSDFSTATE3.0
+G4CHANNELING G4CHANNELINGDATA /usr/share/Geant4/data/G4CHANNELING2.0
 ```
+
+Версии каталогов могут меняться вместе с Geant4. Отдельные AUR-пакеты datasets могут хранить данные в других каталогах; фактические пути к ним задаются переменными окружения на следующем шаге.
 
 ## 6. Подключение переменных окружения datasets
 
@@ -159,7 +182,16 @@ cd build
 cmake ..
 ```
 
-CMake должен найти установленный Geant4.
+При успешной конфигурации конец вывода выглядит примерно так:
+
+```text
+-- Found Geant4: /usr/lib/cmake/Geant4/Geant4Config.cmake (found version "11.4.2")
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/<user>/geant4-B1/build
+```
+
+Версия и имя пользователя в пути могут отличаться.
 
 Соберите B1:
 
@@ -167,7 +199,13 @@ CMake должен найти установленный Geant4.
 cmake --build . -j$(nproc)
 ```
 
-После успешной сборки в каталоге `build` появится `exampleB1`.
+Успешная сборка заканчивается строкой вида:
+
+```text
+[100%] Built target exampleB1
+```
+
+После этого в каталоге `build` появится `exampleB1`.
 
 ## 8. Запуск B1
 
