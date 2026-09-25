@@ -2,6 +2,8 @@
 
 Пошаговое руководство по установке Linux и Geant4.
 
+Готовая PDF-версия пособия: [geant4_guide.pdf](geant4_guide.pdf).
+
 ## Маршруты пособия
 
 1. [Manjaro как основная система](routes/01-manjaro/README.md) — рекомендуемый вариант
