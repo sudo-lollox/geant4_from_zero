@@ -53,7 +53,7 @@ shutdown /s /t 0
 2. Найдите основной раздел Windows — обычно это **C:**.
 3. Нажмите по нему правой кнопкой и выберите **Сжать том**.
 
-![Сжатие раздела Windows перед установкой Manjaro](windows-disk-unallocated_0.png)
+![Сжатие раздела Windows перед установкой Manjaro](pics/windows-disk-unallocated_0.png)
 
 4. Укажите объём, который хотите отдать Manjaro, и подтвердите сжатие.
 
@@ -61,7 +61,7 @@ shutdown /s /t 0
 
 В нашем примере под Manjaro освобождено **97,66 ГБ**:
 
-![Нераспределённое место рядом с Windows](windows-disk-unallocated.png)
+![Нераспределённое место рядом с Windows](pics/windows-disk-unallocated.png)
 
 > [!IMPORTANT]
 > Ничего не создавайте в этой области средствами Windows и не форматируйте её в NTFS. Она должна остаться **нераспределённой** до запуска установщика Manjaro.
@@ -103,11 +103,11 @@ shutdown /s /t 0
 
 Rufus может сообщить, что обнаружен образ **ISOHybrid** и будет применён режим записи **DD**. Это нормально — нажмите **OK**.
 
-![Предупреждение Rufus о записи ISOHybrid](../01-manjaro/rufus-isohybrid.png)
+![Предупреждение Rufus о записи ISOHybrid](../01-manjaro/pics/rufus-isohybrid.png)
 
 Перед записью окно должно выглядеть примерно так:
 
-![Rufus готов к записи Manjaro](../01-manjaro/rufus-ready.png)
+![Rufus готов к записи Manjaro](../01-manjaro/pics/rufus-ready.png)
 
 Проверьте:
 
@@ -123,7 +123,7 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 
 Когда Rufus снова покажет состояние **Готов**, флешка записана.
 
-![Rufus завершил запись](../01-manjaro/rufus-finished.png)
+![Rufus завершил запись](../01-manjaro/pics/rufus-finished.png)
 
 ## 5. Загрузка с флешки
 
@@ -133,11 +133,11 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 2. Подключите загрузочную флешку.
 3. Включите компьютер и сразу несколько раз нажимайте клавишу входа в BIOS/UEFI. Чаще всего это **Delete** или **F2**.
 
-![Подсказка для входа в BIOS/UEFI](../01-manjaro/bios-entry.jpg)
+![Подсказка для входа в BIOS/UEFI](../01-manjaro/pics/bios-entry.jpg)
 
 После входа откроется BIOS/UEFI.
 
-![Главный экран ASUS UEFI BIOS Utility](../01-manjaro/bios-ez-mode.jpg)
+![Главный экран ASUS UEFI BIOS Utility](../01-manjaro/pics/bios-ez-mode.jpg)
 
 Если открыт **EZ Mode**, перейдите в **Advanced Mode**. На плате из примера для этого используется **F7**.
 
@@ -146,15 +146,15 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 1. Откройте раздел **Boot**.
 2. Найдите **Secure Boot**.
 
-![Раздел Boot в ASUS UEFI BIOS Utility](../01-manjaro/bios-boot-tab.jpg)
+![Раздел Boot в ASUS UEFI BIOS Utility](../01-manjaro/pics/bios-boot-tab.jpg)
 
 На плате из примера **OS Type** изначально установлен в **Windows UEFI mode**.
 
-![Secure Boot: Windows UEFI mode](../01-manjaro/secure-boot-windows.jpg)
+![Secure Boot: Windows UEFI mode](../01-manjaro/pics/secure-boot-windows.jpg)
 
 3. Измените **OS Type** на **Other OS**. На других платах вместо этого может быть отдельный параметр **Secure Boot → Disabled**.
 
-![Secure Boot: Other OS](../01-manjaro/secure-boot-other-os.jpg)
+![Secure Boot: Other OS](../01-manjaro/pics/secure-boot-other-os.jpg)
 
 ### Поставить флешку первой в очереди загрузки
 
@@ -162,7 +162,7 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 2. Для **Boot Option #1** выберите флешку. Если она отображается несколько раз, выбирайте вариант **UEFI: <название флешки>**.
 3. Внутренний диск оставьте вторым.
 
-![UEFI-флешка установлена первой](../01-manjaro/boot-priority-usb.jpg)
+![UEFI-флешка установлена первой](../01-manjaro/pics/boot-priority-usb.jpg)
 
 4. Нажмите **F10 → Save & Exit**.
 
@@ -170,7 +170,7 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 
 После перезагрузки откроется меню Manjaro.
 
-![Меню загрузки Manjaro](../01-manjaro/manjaro-boot-menu.jpg)
+![Меню загрузки Manjaro](../01-manjaro/pics/manjaro-boot-menu.jpg)
 
 - **Intel** — **Boot with open source drivers**;
 - **AMD Radeon** — **Boot with open source drivers**;
@@ -179,7 +179,7 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 
 После загрузки откроется рабочий стол Manjaro и окно **Manjaro Hello**.
 
-![Рабочий стол Live-системы Manjaro](../01-manjaro/manjaro-live.jpeg)
+![Рабочий стол Live-системы Manjaro](../01-manjaro/pics/manjaro-live.jpeg)
 
 Выберите **Русский** и нажмите **Launch installer**.
 
@@ -189,19 +189,19 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 
 Выберите **Русский** и нажмите **Далее**.
 
-![Выбор языка установщика](../01-manjaro/installer-language.jpeg)
+![Выбор языка установщика](../01-manjaro/pics/installer-language.jpeg)
 
 ### Регион и часовой пояс
 
 Укажите свой регион и часовой пояс.
 
-![Выбор региона и часового пояса](../01-manjaro/installer-location.jpeg)
+![Выбор региона и часового пояса](../01-manjaro/pics/installer-location.jpeg)
 
 ### Раскладка клавиатуры
 
 В качестве основной раскладки выберите **English (US), Default**.
 
-![Выбор английской раскладки](../01-manjaro/installer-keyboard.jpeg)
+![Выбор английской раскладки](../01-manjaro/pics/installer-keyboard.jpeg)
 
 Русскую раскладку добавим уже после установки.
 
@@ -253,7 +253,7 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 
 Итоговая разметка должна выглядеть так:
 
-![Итоговая ручная разметка dual boot: отдельный EFI Manjaro и root рядом с Windows](dualboot-manual-partition.jpeg)
+![Итоговая ручная разметка dual boot: отдельный EFI Manjaro и root рядом с Windows](pics/dualboot-manual-partition.jpeg)
 
 Перед нажатием **Далее** проверьте ещё раз:
 
@@ -270,7 +270,7 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 
 Заполните имя пользователя, имя компьютера и пароль.
 
-![Создание пользователя и пароля](../01-manjaro/installer-user.jpeg)
+![Создание пользователя и пароля](../01-manjaro/pics/installer-user.jpeg)
 
 Автоматический вход лучше не включать. Галочку **Использовать тот же пароль для аккаунта администратора** можно оставить включённой.
 
@@ -278,7 +278,7 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 
 Для Geant4 офисный пакет не требуется, поэтому выбираем **No Office Suite**.
 
-![Выбор No Office Suite](../01-manjaro/installer-office.jpeg)
+![Выбор No Office Suite](../01-manjaro/pics/installer-office.jpeg)
 
 ### Summary
 
@@ -295,7 +295,7 @@ Rufus может сообщить, что обнаружен образ **ISOHyb
 
 Когда появится сообщение **Готово**, выберите перезагрузку.
 
-![Установка Manjaro завершена](../01-manjaro/installer-finished.jpeg)
+![Установка Manjaro завершена](../01-manjaro/pics/installer-finished.jpeg)
 
 Во время перезагрузки извлеките установочную флешку.
 
@@ -317,7 +317,7 @@ sudo pacman -Syu
 
 Введите пароль и дождитесь окончания обновления.
 
-![Первое обновление Manjaro завершено](../01-manjaro/first-system-update.jpeg)
+![Первое обновление Manjaro завершено](../01-manjaro/pics/first-system-update.jpeg)
 
 После большого обновления перезагрузите компьютер.
 
